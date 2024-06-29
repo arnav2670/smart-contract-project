@@ -1,0 +1,17 @@
+pragma solidity ^0.8.0;
+
+contract ErrorHandling {
+    function requireStatement(uint _num) public pure returns (uint) {
+        require(_num > 0, "Number must be greater than 0");
+        return _num;
+    }
+
+    function assertStatement(uint _num) public pure returns (uint) {
+        assert(_num != 0);
+        return _num;
+    }
+
+    function revertStatement() public pure {
+        revert("This function will always revert");
+    }
+}
